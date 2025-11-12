@@ -1,0 +1,193 @@
+/* Match chatlist body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#welcome-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  border: 1px solid #333;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  text-align: left;
+  padding: 15px 15px 0 15px;
+}
+
+/* User Table Styling */
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 15px;
+  width: calc(100% - 30px);
+  border: 2px solid #333; /* Add outer border to table */
+}
+
+.user-table th,
+.user-table td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid #333; /* Make all borders visible and darker */
+  font-size: 22px; /* Increased by 6px (was 16px) */
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: 24px; /* Increased by 6px (was 18px) */
+}
+
+.user-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Specific styling for email and action columns */
+.user-table th.email-center,
+.user-table td.email-center {
+  text-align: center;
+  font-size: 24px; /* Increased by 6px (was 18px) */
+}
+
+.user-table th.action-center,
+.user-table td.action-center {
+  text-align: center;
+  font-size: 18px; /* Bigger text */
+}
+
+/* Modal Styling */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #dee2e6;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.close-button {
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.modal-footer {
+  padding: 20px;
+  border-top: 1px solid #dee2e6;
+  text-align: right;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+}
+
+.edit_button,
+.delete_button {
+  background-color: transparent;
+  color: blue;
+  border: none;
+  padding: 10px 20px;
+  margin: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px; /* Bigger text for buttons */
+  text-decoration: underline;
+  font-weight: normal; /* Remove bold formatting */
+}
+
+.edit_button:hover,
+.delete_button:hover {
+  color: darkblue;
+}
+
+/* Hide modal by default */
+.modal-hidden {
+  display: none;
+}
+
+.modal-visible {
+  display: block;
+}

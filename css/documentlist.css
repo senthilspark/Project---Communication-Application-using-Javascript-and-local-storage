@@ -1,0 +1,185 @@
+/* Document List Styles */
+
+h2 {
+    margin-bottom: 10px;
+    padding: 15px 15px 0 15px;
+    font-size: 20px; /* Reduced from 24px */
+}
+
+/* Document Table Styling - Similar to user table but smaller text */
+.document-table {
+    width: calc(100% - 30px);
+    border-collapse: collapse;
+    margin: 20px 15px;
+    border: 2px solid #333;
+}
+
+.document-table th,
+.document-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #333;
+    font-size: 16px; /* Reduced from 22px */
+    width: 33.33%; /* Equal width for all columns */
+}
+
+.document-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    font-size: 18px; /* Reduced from 24px */
+}
+
+.document-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.document-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Specific styling for filename and action columns */
+.document-table th.filename-center,
+.document-table td.filename-center {
+    text-align: center;
+    font-size: 16px; /* Reduced from 24px */
+}
+
+.document-table th.action-center,
+.document-table td.action-center {
+    text-align: center;
+    font-size: 14px; /* Reduced from 18px */
+}
+
+.action-links a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+.add-upload-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #00c4cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    width: auto;
+    max-width: fit-content;
+    margin: 15px;
+    white-space: nowrap;
+}
+
+.add-upload-btn:hover {
+    background-color: #009fa3;
+}
+
+/* Modal form styling */
+.login_table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.login_table td {
+    padding: 12px;
+    border: none;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.login_table td:first-child {
+    width: 50%; /* Equal spacing - 50% for label, 50% for input */
+    text-align: center;
+    padding: 12px;
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.login_table td:last-child {
+    width: 50%; /* Equal spacing - 50% for input field */
+    padding: 12px;
+}
+
+.login_table label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.File_description_input,
+.File_upload_input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.File_description_input:focus,
+.File_upload_input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Modal footer alignment */
+.modal-footer {
+    padding: 20px;
+    border-top: 1px solid #dee2e6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Modal width and header adjustments */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    width: 600px; /* Increased from 500px to 600px */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    justify-content: center; /* Center the heading */
+    align-items: center;
+    position: relative;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    flex-grow: 1; /* Take up available space */
+}
+
+.close-button {
+    position: absolute;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+}
+
+.close-button:hover {
+    color: #000;
+}

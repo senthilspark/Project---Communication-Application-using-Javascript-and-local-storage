@@ -1,0 +1,61 @@
+.welcome-body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#welcome-container {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+
+.sub-title {
+  font-size: 20px;
+  color: rgb(0,0,0);
+  margin-bottom: 30px;
+  font-size: 20px;
+}   
+
+.link-button {  
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.loginsuccess_table {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 0px;
+    border-collapse: separate;
+    border-spacing: 0;
+    padding-bottom: 20px;
+}
+
+.loginsuccess_table td {
+    width: 25%;
+    padding: 0;
+}
+
+.loginsuccess_table .link-button {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    background-color: white;
+    color: black;
+    font-weight: normal;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+}
+

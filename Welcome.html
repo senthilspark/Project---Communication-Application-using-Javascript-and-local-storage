@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/welcome.css" />
+  <script>
+    //Clear If any logged in user -- Internal page script
+    localStorage.removeItem(`loggedInUser`);
+  </script>
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <h1 class="main-title">Welcome to Users Module</h1>
+
+    <div class="user-section">
+      <h3 class="section-title">Existing User</h3>
+    </div><a href="./Login.html"><button class="button" type="button" class="Login_Btn">Login</button></a>
+
+    <div class="user-section">
+      <h3 class="section-title">New User?</h3>
+    </div><a href="./Register.html"><button class="button" type="button" class="Register_Btn">Register</button></a>
+  </div>
+</body>
+
+</html>
+
+<!--- project details 
+
+Communication Application using Javascript and local storage
+
+1. Create below HTML pages 
+Welcome.html
+Login.html
+LoginSuccess.html
+Register.html
+RegisterSuccess.html
+Userlist.html
+EditUser.html
+DeleteUser.html or use Modal
+Chatlist.html
+Documentlist.html
+Upload.html or use Modal
+EditDocument.html or use Modal
+DeleteUpload.html or use Modal
+Logout.html
+
+2. For login page
+
+Do below login validation
+
+- Email and Password field is mandatory
+- Email should be valid
+- During login, check email and password exist inside local storage or not, if exist redirect to login successful page else error message "Wrong Email or Password".
+
+3. For Login Successful page, Display welcome text along with loggedin user email from local storage.
+
+4. For Register page
+- Add register user inside users local storage if it is does not exist
+- If user exist, display message "user already exist"
+
+Do below validation
+
+- Fullname, Email, Password and Confirm password field is mandatory.
+- Email should be valid.
+- Password and confirm password should same.
+
+5. For Manage Users page
+
+- Display users list from users local storage.
+
+For example 
+
+[
+{
+"id": 1,
+"name": "Text User",
+"email": "textuser@gmail.com"
+},
+{
+"id": 2,
+"name": "Anne Hunter",
+"email": "annehunter@gmail.com"
+}
+]
+
+6. For Edit User information page
+
+- Display users information from users local storage based on id from url.
+- When we click on save, update users local storage.
+
+Do below validation
+
+- Fullname and Email is mandatory field.
+- Email validation
+
+7. For Delete User Modal page
+
+- When we click on Ok remove user from users local storage else not.
+- Disabled delete link for loggedin user.
+
+8. On Group Chat page
+
+- Display chat information from chats local storage.
+- When we write message and click on send, store message inside local storage.
+- Add scroll when we have huge messages.
+- When we click on refresh, refresh page.
+- Display dynamic loggedin user name.
+- Display dynamic date and time as per wireframe.
+
+Do below validation
+
+- Message input is mandatory field.
+
+9. For Manage Documents page
+
+- Display list of my uploads from uploads local storage, display all users uploads information
+
+For example 
+
+[
+{
+"id": 1,
+"label": "Sales report",
+"fileName": "salesreport.pdf"
+},
+{
+"id": 2,
+"label": "Summary report",
+"fileName": "summary.pdf"
+}
+]
+
+10. For Add upload Modal
+
+- Add label and filename inside upload local storage, no need to upload file
+
+Do below validation
+
+- Description and label is mandatory field
+
+11. For Edit upload modal
+
+- Display edit upload information
+- When we click on save, update uploads local storage
+
+12. For delete upload Modal
+
+- When we click on Ok remove upload from uploads local storage.
+
+13. When we click on logout, remove user from loggedin local storage.
+14. Only loggedin user can access internal pages for example Group Chat, Manage Users and Manage Documents and all modals.
+15. When user is deleted, uploads files, chat information from local storage.
+16. When logged in user update, then update local storage information.
+17. Display chat information in sorted order based on date and time.
+
+Project Marks (100)
+
+1. Proper folder structure and file name - 5 Marks
+2. Format code using VS code formatter - 5 Marks
+3. Proper comments - 5 Marks
+4. Proper Naming convention for CSS and Javascript - 5 Marks
+
+Either user camelcase or Hypen for name
+loyaltyprogram
+
+for example
+loyaltyProgram
+loyalty_program
+
+5. Use class instead of Id for CSS, and for Javascript use id - 5 Marks
+6. Use External CSS and Javascript - 5 Marks
+7. UI should be same as Project Wireframe - 20 Marks (Optional)
+8. Use ES6 concepts where ever needed for example use let, const instead of var, arrow function, template literal, spread operator - 5 Marks
+9. Reuse code as more as possible - 5 Marks
+10. Individual Marks - 80 Marks 
+
+Note:
+
+- Do Javascript validation only
+- users, uploads, chats, loggedin 4 local storage -> users, uploads and chats table
+- You can use Javascript alert wherever needed
+
+Prioritise 
+
+1. Complete Welcome, Login, Login Successful, Register, Register Successful, User List, Edit User, Delete User Modal and Logout along with local storage functionality.
+2. Do Validation for Login, Register, Edit User mandatory fields.
+3. User list CRUD Functionality 
+C - Register page 
+R - Userlist page 
+U - Edit user page 
+D - Delete Modal popup
+4. Internal Navigation
+5. Later work on upload and chat list.
+--->

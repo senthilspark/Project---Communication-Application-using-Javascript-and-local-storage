@@ -1,0 +1,50 @@
+.tab_table {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 1px;
+  border-collapse: separate;
+  border-spacing: 0; /* No spacing between cells */
+  padding-bottom: 20px;
+  background-color: transparent;
+  min-height: 50px;
+  padding-top: 0px;
+  table-layout: fixed; /* Ensures equal column widths */
+}
+
+.tab_table td {
+  width: 25%;
+  padding: 0;
+  margin: 0;
+  vertical-align: top;
+}
+
+.tab_table .link-button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 15px 5px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid black; /* Thick black border for each button */
+  box-sizing: border-box;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 18px;
+  margin: 0;
+}
+
+/* Remove right border for all buttons except the last one to avoid double borders */
+.tab_table td:not(:last-child) .link-button {
+  border-right: none;
+}
+
+/* Round corners only on first and last buttons */
+.tab_table td:first-child .link-button {
+  border-radius: 8px 0 0 8px;
+}
+
+.tab_table td:last-child .link-button {
+  border-radius: 0 8px 8px 0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/login.css" />
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <form action="" onsubmit="return Login()" method="get">
+      <h1 class="main-title">Login</h1>
+
+      <table class="login_table">
+        <tr>
+          <td><label class="form-label" for="email">Email </label></td>
+          <td>
+            <input class="login_input" type="email" id="email" name="email" placeholder="Enter your email" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label class="form-label" for="password">Password </label></td>
+          <td>
+            <input class="login_input" type="password" id="password" name="password" placeholder="Enter your password"
+              required />
+          </td>
+          <br />
+        </tr>
+      </table>
+      <button type="submit" class="Login_Btn">Login</button>
+    </form>
+  </div>
+
+  <script src="./js/login.js"></script>
+</body>
+
+</html>

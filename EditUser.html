@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/editusers.css" />
+  <script src="./js/edituser.js"></script>
+  <script src="./js/userloggedin.js"></script>
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <form action="./Userlist.html" onsubmit="return EditUser()" method="get">
+      <h1 class="main-title">Edit User information</h1>
+
+      <table class="login_table">
+        <tr>
+          <td><label class="form-label" for="fullname">Full Name </label></td>
+          <td>
+            <input class="login_input" type="text" id="fullname" name="fullname" placeholder="Enter your full name"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <td><label class="form-label" for="email">Email </label></td>
+          <td>
+            <input class="login_input" type="email" id="email" name="email" placeholder="Enter your email" required />
+          </td>
+        </tr>
+
+      </table>
+      <button type="submit" class="save_btn">Save</button>
+    </form>
+  </div>
+</body>
+
+</html>

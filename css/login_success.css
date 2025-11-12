@@ -1,0 +1,49 @@
+/* Match chatlist body styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  height: 100vh;
+}
+
+#welcome-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0;
+  border: 1px solid #333;
+  background: #fff;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+}
+
+.main-title {
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 15px 15px 0 15px;
+}
+
+.sub-title {
+  font-size: 25px;
+  color: rgb(0,0,0);
+  margin-bottom: 30px; 
+  text-align: center;
+  padding: 0 15px;
+}   
+
+
+
+
+
+
+

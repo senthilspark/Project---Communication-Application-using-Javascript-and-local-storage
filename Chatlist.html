@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/chatlist.css" />
+  <link rel="stylesheet" href="./css/manageusers.css" />
+  <script src="./js/userloggedin.js"></script>
+  <link rel="stylesheet" href="./css/tab.css" />
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <table id="tab-bar" class="tab_table">
+    </table>
+
+
+    <div class="chat-container">
+      <div class="chat-header">
+        Group Chat
+        <span class="close-btn">X</span>
+      </div>
+      <div id="chat-messages" class="chat-messages">
+      </div>
+      <div class="chat-input">
+        <label id="user-name">User Name</label>
+        <input id="message-input" type="text" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+        <button onclick="refreshChat()">Refresh</button>
+      </div>
+    </div>
+
+    <script src="./js/tab.js"></script>
+    <script>
+      let loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+      if (loggedInUser) {
+        document.getElementById("user-name").textContent = loggedInUser.fullname;
+      }
+
+      let chat = {
+        chat: "",
+      };
+
+      function sendMessage() {
+        let userchat = [];
+        try {
+          let stored = localStorage.getItem("chatMessages");
+          if (stored) {
+            userchat = JSON.parse(stored);
+            if (!Array.isArray(userchat)) {
+              userchat = [];
+            }
+          }
+        } catch (e) {
+          userchat = [];
+        }
+
+        let messageInput = document.getElementById("message-input").value;
+        if (messageInput) {
+          let timestamp = new Date()
+            .toISOString()
+            .slice(0, 19)
+            .replace("T", " ");
+
+          chat.chat = ` [${timestamp}] ${loggedInUser.fullname} : ${messageInput} <br>`;
+
+          userchat.push(chat);
+          localStorage.setItem("chatMessages", JSON.stringify(userchat));
+          document.getElementById("message-input").value = "";
+          refreshChat();
+        }
+      }
+
+      function refreshChat() {
+        document.getElementById("chat-messages").innerHTML = "";
+        let chatmsg = JSON.parse(localStorage.getItem("chatMessages")) || [];
+        chatmsg.forEach((element) => {
+          document.getElementById("chat-messages").innerHTML += element.chat;
+        });
+      }
+    </script>
+
+</body>
+
+</html>

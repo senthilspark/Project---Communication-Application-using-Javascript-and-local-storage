@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application - Share Document</title>
+  <link rel="stylesheet" href="./css/sharedocument.css" />
+  <link rel="stylesheet" href="./css/manageusers.css" />
+  <link rel="stylesheet" href="./css/tab.css" />
+  <script src="./js/userloggedin.js"></script>
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <table id="tab-bar" class="tab_table">  
+    </table>
+
+    <div class="upload-sharing-header">
+      <h2>Upload Sharing:</h2>
+      <select id="fileDropdown" class="file-dropdown" title="Select a file to share">
+        <option value="">-- Select a file --</option>
+      </select>
+    </div>
+
+    <h3>Shared Users</h3>
+    <table class="shared-table">
+      <thead>
+        <tr>
+          <th>Shared Users</th>
+          <th class="action-center">Action</th>
+        </tr>
+      </thead>
+      <tbody id="shared-users-body">
+        <!-- Shared users will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <h3>Add Sharing</h3>
+    <div class="add-sharing-container">
+      <div class="add-sharing-section">
+        <div class="choose-user-header">
+          <label for="userDropdown">Choose User:</label>
+          <select id="userDropdown" class="user-dropdown">
+            <option value="">-- Select a user --</option>
+          </select>
+          <button type="button" class="add-share-btn" onclick="addShare()">Add Share</button>
+          <button type="button" class="add-user-btn" onclick="openAddUserModal()">Add User</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add User Modal -->
+    <div id="addUserModal" class="modal modal-hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Add User</h3>
+          <span class="close-button" onclick="closeAddUserModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <table class="login_table">
+            <tr>
+              <td><label class="form-label" for="newUserName">User Name:</label></td>
+              <td>
+                <input class="user_input" type="text" id="newUserName" name="newUserName"
+                  placeholder="Enter user name" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label class="form-label" for="newUserEmail">Email:</label></td>
+              <td>
+                <input class="user_input" type="email" id="newUserEmail" name="newUserEmail"
+                  placeholder="Enter email" required />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="add-user-btn" onclick="saveNewUser()">
+            Add User
+          </button>
+          <button type="button" class="cancel-btn" onclick="closeAddUserModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/sharedocument.js"></script>
+  <script src="./js/tab.js"></script>
+
+</body>
+
+</html>

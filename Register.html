@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/register.css" />
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <form action="./RegisterSuccess.html" onsubmit="return Register()" method="get">
+      <h1 class="main-title">Register</h1>
+
+      <table class="register_table">
+        <tr>
+          <td><label class="form-label" for="fullname">Full Name </label></td>
+          <td>
+            <input class="register_input" type="text" id="fullname" name="fullname" placeholder="Enter your full name"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <td><label class="form-label" for="email">Email </label></td>
+          <td>
+            <input class="register_input" type="email" id="email" name="email" placeholder="Enter your email"
+              required />
+          </td>
+        </tr>
+        <tr>
+          <td><label class="form-label" for="password">Password </label></td>
+          <td>
+            <input class="register_input" type="password" id="password" name="password"
+              placeholder="Enter your password" required />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label class="form-label" for="confirm-password">Confirm Password
+            </label>
+          </td>
+          <td>
+            <input class="register_input" type="password" id="confirm-password" name="confirm-password"
+              placeholder="Confirm your password" required />
+          </td>
+        </tr>
+
+      </table>
+      <button type="submit" class="register_Btn">Register</button>
+    </form>
+  </div>
+
+  <script src="./js/register.js"></script>
+
+</body>
+
+</html>

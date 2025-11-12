@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application</title>
+  <link rel="stylesheet" href="./css/register_success.css" />
+
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <form action="./RegisterSuccess.html" onsubmit="return validateForm()" method="get">
+      <h1 class="main-title">Registration Successful</h1>
+      <p id="sub-title" class="sub-title">Thank you for registration!</p>
+
+      <a href="./Welcome.html" action="Onclick" class="link-button">Click here to return to home Page</a>
+
+      <script>
+        // Add your form validation logic here
+
+        let userData = JSON.parse(localStorage.getItem("userData"));
+        if (userData == null) {
+          console.log("No user data found.");
+        }
+        let fullname = "";
+
+        // Getting the Url ID parameter
+        let urlParams = new URLSearchParams(window.location.search);
+        let urlId = urlParams.get('id');
+
+        let index = -1;
+        index = userData.findIndex((user) => user.id === Number(urlId));
+
+        if (index === -1 || index === null) {
+          console.log("User ID not found in user data.");
+        }
+        else {
+          fullname = userData[index].fullname;
+        }
+
+        //Displaying the user's full name in the subtitle
+        document.getElementById("sub-title").textContent = `Thank you for registering, ${fullname}!`;
+
+      </script>
+</body>
+
+</html>

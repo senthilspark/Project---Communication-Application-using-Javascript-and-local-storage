@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Communication Application - Uploads Management</title>
+  <link rel="stylesheet" href="./css/documentlist.css" />
+  <link rel="stylesheet" href="./css/manageusers.css" />
+  <link rel="stylesheet" href="./css/tab.css" />
+  <script src="./js/userloggedin.js"></script>
+</head>
+
+<body id="welcome-body">
+  <div id="welcome-container">
+    <table id="tab-bar" class="tab_table">  
+    </table>
+
+    <h2>My Uploads</h2>
+    <table class="document-table">
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th class="filename-center">File Name</th>
+          <th class="action-center">Action</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body1">
+        <!-- User rows will be dynamically added here -->
+      </tbody>
+    </table>
+
+    <h2>Shared Uploads</h2>
+    <table class="document-table">
+      <thead>
+        <tr>
+          <th>Label</th>
+          <th class="filename-center">File Name</th>
+          <th class="action-center">Shared by</th>
+        </tr>
+      </thead>
+      <tbody id="user-table-body2">
+        <!-- User rows will be dynamically added here -->
+      </tbody>
+    </table>
+    <button class="add-upload-btn" type="button" onclick="showUploadModal()">+ Add Upload </button>
+
+    <!-- Upload Modal -->
+    <div id="addUploadModal" class="modal modal-hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Upload</h3>
+          <span class="close-button" onclick="closeUploadModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <table class="login_table">
+            <tr>
+              <td><label class="form-label" for="File_description">File Description </label></td>
+              <td>
+                <input class="File_description_input" type="text" id="File_description" name="File_description"
+                  placeholder="Enter file description" required />
+              </td>
+            </tr>
+            <tr>
+              <td><label class="form-label" for="File_upload">File Upload </label></td>
+              <td>
+                <input class="File_upload_input" type="file" id="File_upload" name="File_upload" required />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-primary" onclick="uploadnow()">
+            Upload Now
+          </button>
+          <button type="button" class="btn-secondary" onclick="closeUploadModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal modal-hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3>Edit</h3>
+          <span class="close-button" onclick="closeEditModal()">&times;</span>
+        </div>
+        <div class="modal-body">
+          <table class="login_table">
+            <tr>
+              <td><label class="form-label" for="Edit_description">File Description:</label></td>
+              <td>
+                <input class="File_description_input" type="text" id="Edit_description" name="Edit_description"
+                  placeholder="Enter file description" required />
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-primary" onclick="saveEdit()">
+            Save
+          </button>
+          <button type="button" class="btn-secondary" onclick="closeEditModal()">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="./js/documentlist.js"></script>
+   <script src="./js/tab.js"></script>
+
+</body>
+
+</html>
